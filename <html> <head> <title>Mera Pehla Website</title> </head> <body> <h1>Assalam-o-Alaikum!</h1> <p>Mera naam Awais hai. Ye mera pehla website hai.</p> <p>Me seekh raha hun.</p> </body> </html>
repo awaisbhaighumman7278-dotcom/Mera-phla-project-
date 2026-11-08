@@ -1,1 +1,42 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>PUBG LIGHT</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;-webkit-tap-highlight-color:transparent}
+body{background:#111;color:#fff;overflow:hidden}
+#menu{position:fixed;inset:0;background:linear-gradient(#1a2a00,#000);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:100;text-align:center;padding:20px}
+#menu h1{font-size:52px;color:#ffcc00;text-shadow:0 0 20px #ffcc00;letter-spacing:3px}
+#menu p{margin:10px 0;color:#ddd}
+.btn{background:#ffcc00;color:#000;border:none;padding:14px 28px;font-size:18px;font-weight:900;border-radius:10px;margin:6px;cursor:pointer;width:260px}
+.btn2{background:#222;color:#fff;border:2px solid #ffcc00}
+select{padding:12px;width:260px;border-radius:10px;font-size:16px;margin:6px}
+#game{display:none;position:fixed;inset:0}
+#arena{position:absolute;inset:0;overflow:hidden}
+.map-desert{background:#d9b45a}.map-jungle{background:#2d5a1e}.map-snow{background:#dfeeff}
+#player{position:absolute;width:42px;height:42px;font-size:38px;z-index:10;transition:0.08s}
+.enemy{position:absolute;width:40px;height:40px;font-size:36px;z-index:9}
+.bullet{position:absolute;width:8px;height:8px;background:#ffcc00;border-radius:50%;z-index:8}
+.cover{position:absolute;background:#555;border:3px solid #222;border-radius:8px;z-index:5;display:flex;align-items:center;justify-content:center;font-size:28px}
+.medkit{position:absolute;font-size:28px;z-index:6;animation:bounce 0.8s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+#hud{position:absolute;top:0;left:0;right:0;padding:8px;display:flex;justify-content:space-between;z-index:20;pointer-events:none}
+.hudbox{background:rgba(0,0,0,0.7);padding:8px 10px;border-radius:10px;font-size:13px;font-weight:bold}
+#healthBar{width:120px;height:12px;background:#333;border-radius:10px;overflow:hidden;margin-top:4px}
+#healthFill{height:100%;background:#00ff00;width:100%}
+#controls{position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-between;padding:12px;z-index:20;align-items:flex-end}
+#joy{width:110px;height:110px;background:rgba(255,255,255,0.15);border:2px solid #fff;border-radius:50%;position:relative}
+#stick{width:50px;height:50px;background:#ffcc00;border-radius:50%;position:absolute;left:30px;top:30px}
+.cbtn{width:68px;height:68px;border-radius:50%;border:none;font-weight:900;font-size:13px;margin:4px}
+#fire{background:#ff2222;color:#fff;width:80px;height:80px;font-size:18px}
+#reload{background:#ffcc00}#heal{background:#00cc44;color:#fff}
+#bagBtn{background:#fff}#gunBtn{background:#fff;color:#000}
+#msg{position:absolute;top:40%;left:0;right:0;text-align:center;font-size:26px;font-weight:900;color:#ffcc00;text-shadow:0 0 10px #000;z-index:30;display:none}
+</style>
+</head>
+<body>
+<div id="menu">
+<h1>PUB
